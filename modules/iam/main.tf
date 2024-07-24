@@ -26,4 +26,28 @@ resource "aws_iam_role_policy_attachment" "glue_role_attachment" {
   role       = aws_iam_role.myrole.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole"
 }
+resource "aws_iam_role_policy_attachment" "gluenotebook_policy_attachment" {
+  role       = aws_iam_role.myrole.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSGlueServiceNotebookRole"
+}
+
+resource "aws_iam_role_policy_attachment" "glueconsole_policy_attachment" {
+  role       = aws_iam_role.myrole.name
+  policy_arn = "arn:aws:iam::aws:policy/AWSGlueConsoleFullAccess"
+}
+
+resource "aws_iam_role_policy_attachment" "service_catalog_policy_attachment" {
+  role       = aws_iam_role.myrole.name
+  policy_arn = "arn:aws:iam::aws:policy/AWSServiceCatalogAdminFullAccess"
+}
+
+resource "aws_iam_role_policy_attachment" "athena_policy_attachment" {
+  role       = aws_iam_role.myrole.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonAthenaFullAccess"
+}
+
+resource "aws_iam_role_policy_attachment" "quicksight_policy_attachment" {
+  role       = aws_iam_role.myrole.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess"
+}
 
