@@ -9,7 +9,7 @@ This repository leverages Terraform to provision and manage various AWS resource
  
 ## Repository Structure
  
-        infrastructure-as-a-code/
+  ``    infrastructure-as-a-code/
         │
         └── terraform/
             ├── modules/
@@ -36,7 +36,7 @@ This repository leverages Terraform to provision and manage various AWS resource
             │   └── lambda/
             │       ├── main.tf
             │       ├── variables.tf
-            │       └── outputs.tf
+            │       └── outputs.tf     ``
  
  
  
