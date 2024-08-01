@@ -28,7 +28,11 @@ This repository leverages Terraform to provision and manage various AWS resource
             │   └── lambda/
             │       ├── main.tf
             │       ├── variables.tf
-            │       └── outputs.tf     
+            │       └── outputs.tf
+            │   └── glue_database/
+            │       ├── main.tf
+            │       ├── variables.tf
+            │       └── outputs.tf             
  
  
  
@@ -66,6 +70,14 @@ This module provisions AWS Lambda functions.
 - **`main.tf`**: Defines the Lambda function resource, its IAM role, and configurations.
 - **`variables.tf`**: Contains input variables for the Lambda function, such as function name, runtime, handler, and memory size.
 - **`outputs.tf`**: Outputs relevant information about the Lambda function, like its ARN and name.
+
+### Glue Database
+
+This module provisions AWS Glue Database.
+
+- **`main.tf`**: Defines the Glue database resource, including its name and optional description. This file contains the core configuration needed to create and manage the Glue database.
+- **`variables.tf`**: Contains input variables for configuring the Glue database.
+- **`outputs.tf`**: Outputs relevant information about the Glue database.
  
 ## Usage
  
