@@ -13,10 +13,6 @@ This repository leverages Terraform to provision and manage various AWS resource
         │
         └── terraform/
             ├── modules/
-            │   ├── s3/
-            │   │   ├── main.tf
-            │   │   ├── variables.tf
-            │   │   └── outputs.tf
             │   ├── glue_crawler/
             │   │   ├── main.tf
             │   │   ├── variables.tf
@@ -29,10 +25,6 @@ This repository leverages Terraform to provision and manage various AWS resource
             │   │   ├── main.tf
             │   │   ├── variables.tf
             │   │   └── outputs.tf
-            │   ├── iam/
-            │   │   ├── main.tf
-            │   │   ├── variables.tf
-            │   │   └── outputs.tf
             │   └── lambda/
             │       ├── main.tf
             │       ├── variables.tf
@@ -41,14 +33,6 @@ This repository leverages Terraform to provision and manage various AWS resource
  
  
 ## Modules
- 
-### S3
- 
-This module creates S3 buckets with optional configuration for versioning, logging, and lifecycle policies.
- 
-- **`main.tf`**: Defines the S3 bucket resource and its configurations.
-- **`variables.tf`**: Specifies input variables such as bucket name, versioning, and logging settings.
-- **`outputs.tf`**: Outputs relevant information about the S3 bucket, like the bucket name and ARN.
  
 ### Glue Crawler
  
@@ -74,13 +58,6 @@ This module creates AWS Glue jobs for ETL tasks.
 - **`variables.tf`**: Contains input variables for the Glue job, such as job name, script location, and default arguments.
 - **`outputs.tf`**: Outputs relevant information about the Glue job, like the job name and ARN.
  
-### IAM
- 
-This module manages IAM roles and policies required by other AWS resources.
- 
-- **`main.tf`**: Defines IAM roles and their attached policies.
-- **`variables.tf`**: Specifies input variables for role names, policy ARNs, and trust relationships.
-- **`outputs.tf`**: Outputs relevant information about the IAM roles, like their ARNs.
  
 ### Lambda
  
