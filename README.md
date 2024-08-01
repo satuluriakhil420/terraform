@@ -9,34 +9,34 @@ This repository leverages Terraform to provision and manage various AWS resource
  
 ## Repository Structure
  
-infrastructure-as-a-code/
-│
-└── terraform/
-    ├── modules/
-    │   ├── s3/
-    │   │   ├── main.tf
-    │   │   ├── variables.tf
-    │   │   └── outputs.tf
-    │   ├── glue_crawler/
-    │   │   ├── main.tf
-    │   │   ├── variables.tf
-    │   │   └── outputs.tf
-    │   ├── stepfunction/
-    │   │   ├── main.tf
-    │   │   ├── variables.tf
-    │   │   └── outputs.tf
-    │   ├── glue_jobs/
-    │   │   ├── main.tf
-    │   │   ├── variables.tf
-    │   │   └── outputs.tf
-    │   ├── iam/
-    │   │   ├── main.tf
-    │   │   ├── variables.tf
-    │   │   └── outputs.tf
-    │   └── lambda/
-    │       ├── main.tf
-    │       ├── variables.tf
-    │       └── outputs.tf
+        infrastructure-as-a-code/
+        │
+        └── terraform/
+            ├── modules/
+            │   ├── s3/
+            │   │   ├── main.tf
+            │   │   ├── variables.tf
+            │   │   └── outputs.tf
+            │   ├── glue_crawler/
+            │   │   ├── main.tf
+            │   │   ├── variables.tf
+            │   │   └── outputs.tf
+            │   ├── stepfunction/
+            │   │   ├── main.tf
+            │   │   ├── variables.tf
+            │   │   └── outputs.tf
+            │   ├── glue_jobs/
+            │   │   ├── main.tf
+            │   │   ├── variables.tf
+            │   │   └── outputs.tf
+            │   ├── iam/
+            │   │   ├── main.tf
+            │   │   ├── variables.tf
+            │   │   └── outputs.tf
+            │   └── lambda/
+            │       ├── main.tf
+            │       ├── variables.tf
+            │       └── outputs.tf
  
  
  
