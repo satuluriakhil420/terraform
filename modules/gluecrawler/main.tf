@@ -1,13 +1,13 @@
-resource "aws_glue_catalog_database" "example" {
+resource "aws_glue_catalog_database" "glue_database" {
   for_each                  = toset([for crawler in var.crawlers : crawler.db_name])
   name                      = each.value
 }
 
 
-resource "aws_glue_crawler" "example" {
+resource "aws_glue_crawler" "glue_crawler" {
   for_each                  = { for crawler in var.crawlers : crawler.name => crawler }
 
-  database_name             = aws_glue_catalog_database.example[each.value.db_name].name
+  database_name             = aws_glue_catalog_database.glue_database[each.value.db_name].name
   name                      = each.value.name
   role                      = var.iam_role_arn
 
