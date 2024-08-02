@@ -1,4 +1,4 @@
-output "myrole_arn" {
-  description = "The ARN of myrole"
-  value       = aws_iam_role.myrole.arn
+output "sentrics_role_arn" {
+  description = "The ARN of sentrics_role"
+  value       = aws_iam_role.sentrics_role.arn
 }
