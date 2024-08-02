@@ -3,3 +3,4 @@ variable "bucketname" {
   type        = string
   default     = "dashboard-sl-non-prod-345"
 }
+
