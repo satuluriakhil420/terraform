@@ -1,4 +1,4 @@
-resource "aws_glue_job" "example" {
+resource "aws_glue_job" "glue_job" {
   count                     = length(var.glue_job_script_locations)
   name                      = element(var.glue_job_script_locations, count.index)
   role_arn                  = var.iam_role_arn
@@ -8,6 +8,5 @@ resource "aws_glue_job" "example" {
 }
 
 output "glue_job_names" {
-  value = aws_glue_job.example[*].name
+  value = aws_glue_job.glue_job[*].name
 }
-
