@@ -1,5 +1,5 @@
 
-# Infrastructure as Code
+# iac
  
 This repository contains Terraform modules for managing AWS resources. The structure is organized to separate concerns and promote reusability.
  
