@@ -1,16 +1,7 @@
-resource "aws_sfn_state_machine" "my_state_machine" {
-  name     = var.state_machine_name
-  role_arn = var.role_arn
+resource "aws_sfn_state_machine" "state_machines" {
+  for_each = { for sm in var.state_machines : sm.name => sm }
 
-  definition = jsonencode({
-    Comment = "A Hello World example of the Amazon States Language using an AWS Lambda Function",
-    StartAt = "HelloWorld",
-    States = {
-      HelloWorld = {
-        Type     = "Pass",
-        Result   = "Hello, World!",
-        End      = true
-      }
-    }
-  })
+  name       = each.value.name
+  role_arn   = var.role_arn
+  definition = each.value.definition
 }
