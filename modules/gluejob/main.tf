@@ -10,7 +10,7 @@ lifecycle {
     ignore_changes = [
       # Ignore changes to the description attribute
       "description",
-      "script_location"
+      "command[0].script_location"
     ]
   }
 
