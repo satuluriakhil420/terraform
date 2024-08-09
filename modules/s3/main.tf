@@ -21,3 +21,6 @@ resource "aws_s3_bucket_acl" "aws_s3_bucket_acl" {
   bucket = var.bucketname
   acl    = "private"
 }
+lifecycle {
+  ignore_changes = all
+}
