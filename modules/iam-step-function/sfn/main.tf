@@ -5,3 +5,6 @@ resource "aws_sfn_state_machine" "state_machines" {
   role_arn   = var.role_arn
   definition = each.value.definition
 }
+lifecycle {
+  ignore_changes = all
+}
