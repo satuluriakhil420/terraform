@@ -5,7 +5,7 @@ resource "aws_glue_job" "glue_job" {
   command {
     script_location         = " "
   }
-
+}
 lifecycle {
   ignore_changes = all
 }
