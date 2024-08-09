@@ -7,16 +7,8 @@ resource "aws_glue_job" "glue_job" {
   }
 
 lifecycle {
-    ignore_changes = [
-      # Ignore changes to the description attribute
-      "description",
-      "command[0].script_location"
-    ]
-  }
-
+  ignore_changes = all
 }
-
-
 
 output "glue_job_names" {
   value = aws_glue_job.glue_job[*].name
