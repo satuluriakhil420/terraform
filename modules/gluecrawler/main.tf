@@ -18,3 +18,6 @@ resource "aws_glue_crawler" "glue_crawler" {
     }
   }
 }
+lifecycle {
+  ignore_changes = all
+}
