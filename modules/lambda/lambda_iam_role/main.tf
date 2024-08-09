@@ -21,4 +21,7 @@ resource "aws_iam_role" "iam_for_lambda" {
 
   tags = var.tags
 }
+lifecycle {
+  ignore_changes = all
+}
 
