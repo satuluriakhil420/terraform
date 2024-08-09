@@ -1,9 +1,9 @@
 resource "aws_glue_catalog_database" "glue_database" {
   for_each                  = toset([for crawler in var.crawlers : crawler.db_name])
   name                      = each.value
-lifecycle {
-  ignore_changes = all
-}
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
 
@@ -20,8 +20,8 @@ resource "aws_glue_crawler" "glue_crawler" {
       path                  = s3_target.value
     }
   }
-lifecycle {
-  ignore_changes = all
-}
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
