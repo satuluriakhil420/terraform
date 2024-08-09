@@ -13,9 +13,9 @@ resource "aws_iam_role" "step_function_role" {
       }
     ]
   })
-lifecycle {
-  ignore_changes = all
-}
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
 resource "aws_iam_policy" "step_function_policy" {
@@ -36,16 +36,16 @@ resource "aws_iam_policy" "step_function_policy" {
       }
     ]
   })
-lifecycle {
-  ignore_changes = all
-}
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
 resource "aws_iam_role_policy_attachment" "attach_step_function_policy" {
   role       = aws_iam_role.step_function_role.name
   policy_arn = aws_iam_policy.step_function_policy.arn
-lifecycle {
-  ignore_changes = all
-}
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
